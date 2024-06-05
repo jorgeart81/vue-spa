@@ -159,6 +159,7 @@
         Sorry, the page you are looking for could not be found.
       </p>
       <RouterLink
+        replace
         :to="{ name: 'home' }"
         class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-12 rounded transition duration-150"
         title="Return Home"

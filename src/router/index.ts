@@ -46,6 +46,10 @@ export const router = createRouter({
           component: () => import('@/modules/auth/pages/LoginPage.vue')
         },
         {
+          path: '',
+          redirect: { name: 'login' }
+        },
+        {
           path: 'register',
           name: 'register',
           component: () => import('@/modules/auth/pages/RegisterPage.vue')
