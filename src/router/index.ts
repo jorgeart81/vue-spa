@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingLayout from '@/modules/landing/layouts/LandingLayout.vue'
 import HomePage from '@/modules/landing/pages/HomePage.vue'
 import AuthLayout from '@/modules/auth/layout/AuthLayout.vue'
+import NotFound404 from '@/modules/common/pages/NotFound404.vue'
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +51,7 @@ export const router = createRouter({
           component: () => import('@/modules/auth/pages/RegisterPage.vue')
         }
       ]
-    }
+    },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound404 }
   ]
 })
