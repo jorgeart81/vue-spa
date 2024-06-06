@@ -4,6 +4,7 @@ import LandingLayout from '@/modules/landing/layouts/LandingLayout.vue'
 import HomePage from '@/modules/landing/pages/HomePage.vue'
 import AuthLayout from '@/modules/auth/layout/AuthLayout.vue'
 import NotFound404 from '@/modules/common/pages/NotFound404.vue'
+import isAuthenticatedGuard from '@/modules/auth/guard/is-authenticated.guard'
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,6 +41,7 @@ export const router = createRouter({
             const id = Number(route.params.id)
             return isNaN(id) ? { id: 1 } : { id }
           },
+          beforeEnter: [isAuthenticatedGuard],
           component: () => import('@/modules/pokemons/pages/PokemonPage.vue')
         }
       ]

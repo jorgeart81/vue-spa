@@ -15,8 +15,9 @@
           <RouterLink :to="{ name: 'features' }"> Features </RouterLink>
           <RouterLink :to="{ name: 'pricing' }"> Pricing </RouterLink>
           <RouterLink :to="{ name: 'contact' }"> Contact </RouterLink>
+          <RouterLink :to="{ name: 'pokemon', params: { id: 1 } }"> Pokemon </RouterLink>
         </div>
-        <RouterLink :to="{ name: 'auth' }"> Login </RouterLink>
+        <RouterLink :to="{ name: 'login' }"> Login </RouterLink>
         <div></div>
       </nav>
     </header>
