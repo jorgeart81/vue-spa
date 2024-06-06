@@ -11,11 +11,24 @@
       </div>
       <nav class="ml-auto space-x-4 flex items-center h-10 sm:space-x-6">
         <div class="flex gap-4">
-          <RouterLink :to="{ name: 'home' }"> Home </RouterLink>
-          <RouterLink :to="{ name: 'features' }"> Features </RouterLink>
-          <RouterLink :to="{ name: 'pricing' }"> Pricing </RouterLink>
-          <RouterLink :to="{ name: 'contact' }"> Contact </RouterLink>
-          <RouterLink :to="{ name: 'pokemon', params: { id: 1 } }"> Pokemon </RouterLink>
+          <RouterLink :to="{ name: 'home' }" exact-active-class="underline font-semibold">
+            Home
+          </RouterLink>
+          <RouterLink :to="{ name: 'features' }" exact-active-class="underline font-semibold">
+            Features
+          </RouterLink>
+          <RouterLink :to="{ name: 'pricing' }" exact-active-class="underline font-semibold">
+            Pricing
+          </RouterLink>
+          <RouterLink :to="{ name: 'contact' }" exact-active-class="underline font-semibold">
+            Contact
+          </RouterLink>
+          <RouterLink
+            :to="{ name: 'pokemon', params: { id: 1 } }"
+            exact-active-class="underline font-semibold"
+          >
+            Pokemon
+          </RouterLink>
         </div>
         <RouterLink :to="{ name: 'login' }"> Login </RouterLink>
         <div></div>
